@@ -1,0 +1,31 @@
+{
+  "name": "@jym990/webcomp-poc",
+  "version": "0.1.0",
+  "type": "module",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "exports": {
+    "./status-badge": {
+      "import": "./dist/status-badge.js"
+    },
+    "./tag": {
+      "import": "./dist/tag.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepublishOnly": "npm run update:exports && npm run build",
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview",
+    "update:exports": "node scripts/update-exports.js"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0",
+    "lit": "^3.1.0"
+  }
+}
