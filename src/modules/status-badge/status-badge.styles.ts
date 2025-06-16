@@ -4,13 +4,11 @@ export const statusBadgeStyles = css`
   :host {
     display: flex;
     width: 100%;
-    --blue-bg: #e5f0fc;
-    --blue-color: #002c6c;
-    --blue-border: #d5e2f2;
+    --font-family: GothamSSm, Roboto, sans-serif;
   }
 
   .status-badge {
-    font-family: Roboto, arial, sans-serif;
+    font-family: var(--font-family);
     border-radius: 50px;
     border-width: 1px;
     border-style: solid;
@@ -35,9 +33,9 @@ export const statusBadgeStyles = css`
   }
 
   .BLUE {
-    background-color: var(--blue-bg);
-    color: var(--blue-color);
-    border-color: var(--blue-border);
+    background-color: #d8e9fa;
+    color: #0076c0;
+    border-color: #b7d8f3;
   }
 
   .BLUE.stroke {
