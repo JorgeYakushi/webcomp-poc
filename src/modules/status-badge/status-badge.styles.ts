@@ -83,9 +83,9 @@ export const statusBadgeStyles = css`
   }
 
   .GREEN {
-    background-color: #dbf0db;
-    color: #2e8540;
-    border-color: #bde3bd;
+    background-color: #ecf8f1;
+    color: #2c6332;
+    border-color: #bbdec4;
   }
 
   .GREEN.stroke {

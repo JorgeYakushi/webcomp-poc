@@ -21,6 +21,13 @@ export default defineConfig(({ command }) => {
 
   return {
     root: isBuild ? "." : resolve(__dirname, "demo"),
+    css: {
+      preprocessorOptions: {
+        scss: {
+          includePaths: ["node_modules"], // ✅ Add support for Carbon SCSS imports
+        },
+      },
+    },
     build: isBuild
       ? {
           lib: false,
@@ -38,5 +45,6 @@ export default defineConfig(({ command }) => {
     server: {
       open: true,
     },
+    assetsInclude: ["**/*.scss"], // ✅ keep if you reference raw SCSS anywhere
   };
 });
